@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Open+Sans&family=Poppins:wght@100&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif, 'Open Sans', sans-serif, 'Poppins', sans-serif;
+}
+
+@keyframes quiet {
+  25%{
+    transform: scaleY(.6);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes normal {
+  25%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(.6);
+  }
+}
+@keyframes loud {
+  25%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(1.2);
+  }
+}
+
+.boxContainer{
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  --boxSize: 8px;
+  --gutter: 4px;
+  width: calc((var(--boxSize) + var(--gutter)) * 5);
+}
+
+.box{
+  transform: scaleY(.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: #ca75f4;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.box1{
+  animation-name: quiet;
+}
+
+.box2{
+  animation-name: normal;
+}
+
+.box3{
+  animation-name: quiet;
+}
+
+.box4{
+  animation-name: loud;
+}
+
+.box5{
+  animation-name: quiet;
+}
